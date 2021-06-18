@@ -1,0 +1,230 @@
+@import  'imports/_reset.scss' , 'imports/_fonts.scss' ,'imports/_variables.scss';
+
+body{
+    font-family: 'Netflix';
+    background: $black;
+    letter-spacing: .2px;
+    font-weight: 100;
+    overflow-x: unset;
+}
+
+.header{
+    width: 360px;
+    height: 549px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 360px;
+        height: 198px;
+        background: linear-gradient(180deg, #191919 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 101.98%);
+        top: 0;
+        z-index: -50;
+        left: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 360px;
+        height: 70px;
+        bottom: calc(549px - 523px);
+        transform: rotate(-180deg);
+        background: linear-gradient(180deg, #0a0a0a -99.29%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 101.98%);    
+        z-index: -50;
+        left: 0;
+    }
+
+    &-video{
+        position: absolute;
+        width: 360px;
+        height: 513px;
+        z-index: -100;
+    }
+
+    &-img{
+        width: 360px;
+        height: 513px;
+        position: absolute;
+        z-index: -80;
+    }
+
+    &-logo{
+        width: 55.84px;
+        height: 24px;
+        margin: 16px 0 0 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    &-nav{
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+    }
+
+    &-ul{
+        align-self: center;
+        margin-top: 24px;
+        width: 235px;
+        height: 24px;
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-li{
+        font-family: 'Netflix';
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &-p{
+        font-size: 11.2px;
+        line-height: 15.3px;
+        text-align: center;
+        color: white;
+        margin-bottom: 12px;
+    }
+
+    &-div{
+        width: 312px;
+        height: 146px;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        &-imgdiv{
+            margin-bottom: 12px;
+        }
+        &-div{
+            padding: 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 312px;
+            height: 43px;
+        }
+    }
+
+    &-button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+        width: 38px;
+        height: 43px;
+        & button{
+            width: 118px;
+            height: 32px;
+            padding: 4px 16px 4px 16px;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 2px;
+            align-items: center;
+        }
+    }
+
+    &-span{
+        font-weight: 600;
+        font-size: 11.2px;
+        line-height: 15.3px;
+    }
+
+
+}
+
+.main{
+    background: $black;
+    width: 360px;
+    height: 560px;
+    margin-top: 48px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 75px;
+    &-movies{
+        height: 560px;
+        width: calc(360px - 16px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &-movie{
+        &-img-div{
+            margin-top: 8px;
+            width: 525px;
+            display: grid;
+            grid-template-columns: repeat(7, 96px);
+            grid-gap: 8px;
+            & img{
+                width: 96px;
+                height: 144px;
+                border-radius: 2px;
+            }
+        }
+    }
+    &-movie-span{
+        color: white;
+        font-weight: 700;
+        font-size: 17.5px;
+        line-height: 23.91px;
+    }
+    &-movies-first-div{
+        overflow-x: scroll;
+    }
+}
+
+.footer{
+    position: fixed;
+    z-index: 5600000;
+    background: $black;
+    margin-top: 8px;
+    width: 100%;
+    height: 64px;
+    bottom: 0;
+    &-ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &-li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12px;
+        margin-bottom: 13px;
+    }
+
+    & div{
+        width: 22px;
+        height: 18.9px;
+    }
+
+    &-img{
+        color: white;
+        object-fit: cover
+    }
+
+    &-span{
+        margin-top: 3px;
+        font-size: 11.2px;
+        font-weight: 400;
+        line-height: 15.3px;
+        color: grey;
+    }
+
+    & .active{
+        color: white;
+    }
+}

@@ -41,10 +41,6 @@ td {
   border-spacing: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 h1,
 h2,
 h3,
@@ -132,7 +128,8 @@ body {
   position: absolute;
   width: 100%;
   height: 513px;
-  z-index: -100;
+  z-index: -200;
+  transition: all .4s ease;
 }
 
 .header-img {
@@ -140,6 +137,7 @@ body {
   height: 513px;
   position: absolute;
   z-index: -80;
+  transition: all .4s ease-out;
 }
 
 .header-logo {
